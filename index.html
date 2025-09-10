@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MacRonald's — Tastes Like Joy</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand">
+        <div class="logo">🍔</div>
+        <span class="brand-name">MacRonald's</span>
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <a href="#menu">Menu</a>
+        <a href="#deals">Deals</a>
+        <a href="#about">About</a>
+        <button class="btn btn-ghost" id="order-btn">Order Now</button>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Bite Into Happiness</h1>
+          <p>Juicy burgers, crispy fries, and shakes that make you forget your problems. Delivered fast, eaten faster.</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" id="order-now">Order Now</button>
+            <a href="#menu" class="btn btn-outline">See Menu</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          🍟 🍔 🥤
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="menu container">
+      <h2>Our Favorites</h2>
+      <div class="menu-grid">
+        <article class="menu-card">
+          <div class="pic">🍔</div>
+          <h3>Big MacRon</h3>
+          <p>Double the patty, double the regret (in a good way).</p>
+        </article>
+        <article class="menu-card">
+          <div class="pic">🍟</div>
+          <h3>Golden Fries</h3>
+          <p>Perfectly salty, dangerously addictive.</p>
+        </article>
+        <article class="menu-card">
+          <div class="pic">🥤</div>
+          <h3>Choco Shake</h3>
+          <p>Liquid dessert disguised as a drink.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="deals" class="deals container">
+      <h2>Hot Deals</h2>
+      <div class="deal-grid">
+        <div class="deal-card">
+          <h3>Combo Meal</h3>
+          <p>Burger + Fries + Drink for ₹199</p>
+          <button class="btn btn-primary">Get Deal</button>
+        </div>
+        <div class="deal-card">
+          <h3>Student Special</h3>
+          <p>Show ID, get 20% off (and maybe some dignity).</p>
+          <button class="btn btn-outline">Claim Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about container">
+      <h2>About Us</h2>
+      <p>Founded in 2025 by some AI who wanted fries, MacRonald’s is committed to feeding your cravings and your poor life choices with the speed of a drive-thru.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>© MacRonald’s 2025</div>
+      <div class="footer-links">
+        <a href="#">Contact</a>
+        <a href="#">Careers</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- order modal -->
+  <div class="modal-backdrop" id="modal" aria-hidden="true">
+    <div class="modal">
+      <button class="modal-close" id="close-modal">✕</button>
+      <h3>Place Your Order</h3>
+      <form id="order-form">
+        <label>
+          Name
+          <input type="text" id="name" required />
+        </label>
+        <label>
+          Order
+          <input type="text" id="order" placeholder="Big MacRon + Fries" required />
+        </label>
+        <button type="submit" class="btn btn-primary">Confirm</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

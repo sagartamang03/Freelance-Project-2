@@ -1,0 +1,54 @@
+:root {
+  --red: #d71a28;
+  --yellow: #ffc300;
+  --bg: #fff5f2;
+  --text: #222;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body { margin: 0; background: var(--bg); color: var(--text); }
+.container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+
+/* header */
+.site-header { background: var(--red); color: white; position: sticky; top: 0; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; }
+.brand { display: flex; align-items: center; gap: 8px; text-decoration: none; color: white; font-weight: bold; font-size: 20px; }
+.main-nav { display: flex; gap: 16px; align-items: center; }
+.main-nav a { text-decoration: none; color: white; padding: 6px 10px; }
+.btn { padding: 8px 14px; border: 0; border-radius: 8px; cursor: pointer; font-weight: bold; }
+.btn-primary { background: var(--yellow); color: #222; }
+.btn-outline { background: transparent; border: 2px solid var(--yellow); color: var(--yellow); }
+.btn-ghost { background: transparent; border: 2px solid white; color: white; }
+.nav-toggle { display: none; background: none; border: 0; }
+.nav-toggle span { display:block; width:20px; height:2px; background:white; margin:4px 0; }
+
+/* hero */
+.hero { background: var(--red); color: white; padding: 60px 0; }
+.hero-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 24px; }
+.hero h1 { font-size: 42px; margin: 0 0 12px; }
+.hero p { margin: 0 0 18px; }
+
+/* sections */
+.menu-grid, .deal-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 16px; }
+.menu-card, .deal-card { background: white; padding: 18px; border-radius: 12px; text-align: center; }
+.menu-card .pic { font-size: 48px; margin-bottom: 10px; }
+
+/* about */
+.about { text-align: center; padding: 40px 0; }
+
+/* footer */
+.site-footer { background: #111; color: #aaa; padding: 16px; }
+.footer-grid { display: flex; justify-content: space-between; }
+
+/* modal */
+.modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; place-items: center; }
+.modal { background: white; padding: 20px; border-radius: 12px; position: relative; max-width: 400px; width: 100%; }
+.modal-close { position: absolute; right: 10px; top: 10px; border: 0; background: transparent; font-size: 18px; cursor: pointer; }
+.modal form label { display: block; margin: 12px 0; }
+.modal input { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 6px; }
+
+@media (max-width: 768px) {
+  .hero-grid { grid-template-columns: 1fr; text-align: center; }
+  .main-nav { display: none; flex-direction: column; background: var(--red); position: absolute; right: 20px; top: 60px; padding: 12px; border-radius: 8px; }
+  .nav-toggle { display: block; }
+}
